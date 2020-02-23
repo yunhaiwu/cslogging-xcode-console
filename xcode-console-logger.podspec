@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
 
 s.name         = "xcode-console-logger"
-s.version      = "0.0.1"
+s.version      = "0.0.2"
 s.summary      = "xcode console logger"
 
 s.description  = <<-DESC

@@ -18,7 +18,7 @@
 @implementation CSSimpleLoggerFactory
 
 #pragma mark CSLoggerFactory
-- (id<CSLogger>)getLogger {
+- (id<CSLogger>)build {
     if (!_logger) {
         static dispatch_once_t onceToken;
         dispatch_once(&onceToken, ^{

@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <CocoaService/CSLogging.h>
+#import <CocoaService/CSLoggingHeader.h>
 
 
 @interface XcodeConsoleLogger : NSObject<CSLogger>
