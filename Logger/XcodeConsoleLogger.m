@@ -32,7 +32,7 @@
         NSString *message = [[NSString alloc] initWithFormat:format arguments:args];
         va_end(args);
         dispatch_async(_log_queue, ^{
-            NSLog(@"[ERROR] %@", message);
+            printf("[ERROR] %s \n", [message UTF8String]);
         });
     }
 }
@@ -44,7 +44,7 @@
         NSString *message = [[NSString alloc] initWithFormat:format arguments:args];
         va_end(args);
         dispatch_async(_log_queue, ^{
-            NSLog(@"[WARN] %@", message);
+            printf("[WARN] %s \n", [message UTF8String]);
         });
     }
 }
@@ -56,7 +56,7 @@
         NSString *message = [[NSString alloc] initWithFormat:format arguments:args];
         va_end(args);
         dispatch_async(_log_queue, ^{
-            NSLog(@"[INFO] %@", message);
+            printf("[INFO] %s \n", [message UTF8String]);
         });
     }
 }
@@ -68,7 +68,7 @@
         NSString *message = [[NSString alloc] initWithFormat:format arguments:args];
         va_end(args);
         dispatch_async(_log_queue, ^{
-            NSLog(@"[DEBUG] %@", message);
+            printf("[INFO] %s \n", [message UTF8String]);
         });
     }
 }
@@ -80,7 +80,7 @@
         NSString *message = [[NSString alloc] initWithFormat:format arguments:args];
         va_end(args);
         dispatch_async(_log_queue, ^{
-            NSLog(@"[VERBOSE] %@", message);
+            printf("[VERBOSE] %s \n", [message UTF8String]);
         });
     }
 }
